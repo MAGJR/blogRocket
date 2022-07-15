@@ -3,7 +3,7 @@ import { getPrismicClient } from '../services/prismic';
 import Header from '../components/Header';
 import Link from 'next/link'
 import {FiCalendar, FiUser} from 'react-icons/fi'
-
+import Prismic from '@prismicio/client'
 
 import commonStyles from '../styles/common.module.scss';
 import styles from './home.module.scss';
@@ -59,9 +59,9 @@ export default function Home() {
   )
 }
 
-// export const getStaticProps = async () => {
-//   // const prismic = getPrismicClient({});
-//   // const postsResponse = await prismic.getByType(TODO);
+export const getStaticProps = async () => {
+  const prismic = getPrismicClient({});
+  const postsResponse = await prismic.getByType([Prismic.predicate.at('document.type')]);
 
-//   // TODO
-// };
+  // TODO
+};

@@ -1,5 +1,18 @@
 {
   "slices": {
-    "Posts": {}
+    "Posts": {},
+    "Post": {}
+  },
+  "_cts": {
+    "post": {
+      "group": {
+        "Body": {
+          "config": {
+            "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
+        }
+      }
+    }
   }
 }
